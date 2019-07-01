@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dwakenya.techsavanna.newdwa">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="com.dwakenya.techsavanna.newdwa.app.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/homecarehublogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/homecarehublogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.dwakenya.techsavanna.newdwa.FirstPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dwakenya.techsavanna.newdwa.LoginActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.RegisterActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.RegisterStep2Activity" />
+        <activity
+            android:name="com.dwakenya.techsavanna.newdwa.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.dwakenya.techsavanna.newdwa.DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.dwakenya.techsavanna.newdwa.EmployeeHomeActivity"
+            android:label="@string/title_activity_employee_home"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.CandidateActivity" />
+
+        <service android:name="com.dwakenya.techsavanna.newdwa.services.DwaFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.dwakenya.techsavanna.newdwa.services.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.dwakenya.techsavanna.newdwa.ImageCompressedActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.FeedBackActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.HOSActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.OwnerResourcesActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.HORActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.HASActivity" />
+        <activity android:name="com.dwakenya.techsavanna.newdwa.MpesaActivity"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:paddingLeft="12dp"
+       android:paddingRight="12dp"
+       android:orientation="vertical"
+       android:layout_marginTop="?attr/actionBarSize">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="140dp"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:orientation="vertical"
+           android:layout_marginTop="5dp">
+
+           <TextView
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="2dp"
+               android:text="Search Criteria"
+               android:textColor="#000000"
+               android:textSize="15sp"
+               android:textStyle="bold" />
+
+           <fr.ganfra.materialspinner.MaterialSpinner
+               android:id="@+id/sp_search_by"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:popupBackground="#F44336"
+               android:theme="@style/ThemeSpinner" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="140dp"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:orientation="vertical"
+           android:layout_marginTop="5dp">
+
+           <TextView
+               android:id="@+id/spinner_pog"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginTop="2dp"
+               android:text="Select From Criteria"
+               android:textColor="#000000"
+               android:textSize="15sp"
+               android:textStyle="bold" />
+
+           <fr.ganfra.materialspinner.MaterialSpinner
+               android:id="@+id/sp_specified_criteria"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:popupBackground="#F44336"
+               android:theme="@style/ThemeSpinner" />
+       </LinearLayout>
+
+       </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <Button
+               android:id="@+id/btn_generate"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:textSize="16sp"
+               android:text="Generate"/>
+
+
+       </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <ListView
+           android:id="@+id/lv_employees"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           >
+
+       </ListView>
+        </LinearLayout>
+
+
+   </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

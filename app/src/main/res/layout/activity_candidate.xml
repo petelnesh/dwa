@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="0dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- City  Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#000000">
+
+                    <EditText
+                        android:id="@+id/input_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="City"
+                        android:inputType="textCapWords"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@drawable/cursor_color" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!-- State  Label -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#000000">
+
+                    <EditText
+                        android:id="@+id/input_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="Estate"
+                        android:inputType="textCapWords"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@drawable/cursor_color" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <!-- Time to call  Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_best_time_to_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Best Time To Call"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+                    <EditText
+                        android:id="@+id/etxt_fromdate"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@color/white"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                        android:hint="Available From"
+                        android:inputType="textPostalAddress"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@drawable/cursor_color" />
+
+
+
+
+                <!-- Relocate  Label -->
+                <CheckBox
+                    android:id="@+id/chkRelocate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Can Relocate" />
+
+            </RelativeLayout>
+
+
+            <!--Current Employer   Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_current_employer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Current Employer"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!-- Current Pay  Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_current_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Current Pay"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- Desired Pay  Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_desired_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Desired Pay"
+                    android:layout_marginRight="5dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <!--Current Employer   Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Length of Last Employment"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Current Employer   Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Reason for leaving last Employer"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Current Employer   Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000">
+
+                <EditText
+                    android:id="@+id/input_referee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:hint="Referee: Name and Contact"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <Button
+                    android:id="@+id/btn_proceedTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/rounded_border_edittext_filled"
+                    android:text="Next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

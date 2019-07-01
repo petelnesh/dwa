@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:paddingTop="0dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardElevation="10dp"
+            >
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                   <View
+                    android:layout_width="5dp"
+                    android:layout_height="150dp"
+                       android:layout_weight="1"
+                    android:background="@color/colorAccent"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Details"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Gender"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentRight="true"
+                            android:text="Male"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Tribe"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_tribe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="Kikuyu"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentStart="true"
+                            android:text="Marital Status"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_marital_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="Single"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentStart="true"
+                            android:text="Age"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="10"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Children"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_no_of_children"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentRight="true"
+                            android:text="3"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentStart="true"
+                            android:text="Lives in"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_region"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorAccent"
+                            android:layout_alignParentRight="true"
+                            android:text="Nairobi"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:layout_marginTop="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardElevation="10dp"
+            android:background="@drawable/cardview_bg"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trained By"
+                    android:textColor="@color/colorAccent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_org"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="Techsavanna Co. Ltd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textSize="18sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/ggg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Phone : "
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_company_contact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/ggg"
+                            android:layout_toRightOf="@+id/ggg"
+                            android:text="0729265990"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        //LOCATION
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:contentPaddingRight="10dp"
+            app:cardElevation="10dp"
+            android:layout_marginBottom="@dimen/card_margin">
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+            <View
+                android:layout_width="5dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Location"
+                    android:textColor="@color/colorAccent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                <TextView
+                    android:id="@+id/tv_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_coordinates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:contentPaddingRight="10dp"
+            app:cardElevation="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employment Details"
+                    android:textColor="@color/colorAccent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/colorAccent"
+                            android:text="Available From"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_available_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Can Relocate"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_can_relocate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Current Employer"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_current_employer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="Single"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Current Pay"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+
+                        <TextView
+                            android:id="@+id/ksh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/txt_current_pay"
+                            android:text="Ksh "
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                        <TextView
+                            android:id="@+id/txt_current_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="20000"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Last Employment Duration"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txt_length_of_last_employment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="3"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="Desired Pay"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="15sp" />
+
+
+                        <TextView
+                            android:id="@+id/ksh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/txt_desired_pay"
+                            android:text="Ksh "
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                        <TextView
+                            android:id="@+id/txt_desired_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="20000"
+                            android:textColor="@color/colorAccent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/card_margin">
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Key Skills"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/theme_divider"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <ListView
+                    android:id="@+id/lv_specialities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                </ListView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

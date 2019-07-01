@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/colorPrimary"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/employee_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="220dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg" />
+        <LinearLayout
+            android:id="@+id/textBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/employee_photo"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/employee_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Love t"
+                    android:textColor="#040404"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:id="@+id/employee_prefernce"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/employee_name"
+                    android:layout_toRightOf="@+id/employee_name"
+                    android:text="Cookery "
+                    android:textColor="@color/theme_primary_light"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/employee_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/employee_name"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/empl_status"
+                android:layout_toRightOf="@+id/empl_status"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:ellipsize="end"
+                android:text="Cook, gardener .... "
+                android:textColor="#343434"
+                android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Is at "
+                    android:textColor="#343434"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/employee_loc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/_loc"
+                    android:layout_toRightOf="@+id/_loc"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text=", Waiyaki Way, Spring Valley Estate, Nairobi, Nairobi County, Kenya"
+                    android:textColor="#343434"
+                    android:textSize="11sp" />
+
+
+</LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--&lt;!&ndash;  ListRow Left sied Thumbnail image &ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/thumbnail"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:padding="3dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/employee_photo"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:src="@drawable/techsavanna" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash; Title Of Song&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/employee_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignTop="@+id/thumbnail"-->
+            <!--android:layout_toRightOf="@+id/thumbnail"-->
+            <!--android:text="Love t"-->
+            <!--android:textColor="#040404"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:typeface="sans" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/empl_status"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/employee_name"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_toEndOf="@+id/thumbnail"-->
+            <!--android:layout_toRightOf="@+id/thumbnail"-->
+            <!--android:text="Skills "-->
+            <!--android:textColor="#343434"-->
+            <!--android:textSize="15sp" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/employee_status"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/employee_name"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_toEndOf="@+id/empl_status"-->
+            <!--android:layout_toRightOf="@+id/empl_status"-->
+            <!--android:text="Just "-->
+            <!--android:textColor="#343434"-->
+            <!--android:textSize="15sp" />-->
+
+
+        <!--&lt;!&ndash;Preference &ndash;&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/emp_status"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/empl_status"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_toEndOf="@+id/thumbnail"-->
+            <!--android:layout_toRightOf="@+id/thumbnail"-->
+            <!--android:text="Preference "-->
+            <!--android:textColor="@color/theme_primary_light"-->
+            <!--android:textSize="15sp" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/employee_prefernce"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/empl_status"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_toEndOf="@+id/emp_status"-->
+            <!--android:layout_toRightOf="@+id/emp_status"-->
+            <!--android:text="Cookery "-->
+            <!--android:textColor="@color/theme_primary_light"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

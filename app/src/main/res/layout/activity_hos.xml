@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dwakenya.techsavanna.newdwa.HOSActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+
+        app:titleTextColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:id="@+id/laundrycard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="#996600"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/laundry"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/laundry"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/hosname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_owner_services"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"  />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="12dp"
+            android:layout_weight="1"
+            app:cardElevation="6dp"
+            android:id="@+id/housekeepingcard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#004d1a"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/housekeeping"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/hk"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/horname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/home_owner_resources"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"   />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:id="@+id/childcarecard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#333399"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/childcare"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/childcare"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/childcarehos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_owner_services"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"  />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="12dp"
+            android:layout_weight="1"
+            app:cardElevation="6dp"
+            android:id="@+id/homenurcingcard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#990"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/homenurcing"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/homenursing"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/horhomenursing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/home_owner_resources"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"   />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:id="@+id/carteringcard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#990073"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/cartering"
+                    android:src="@drawable/catering"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/hoscatering"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_owner_services"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"  />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="12dp"
+            android:layout_weight="1"
+            app:cardElevation="6dp"
+            android:id="@+id/gardeningcard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#009999"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/gardening"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/gardening"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/horgardening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/home_owner_resources"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"   />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:id="@+id/hosghwcard"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                android:background="#e6e600"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/ghw"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/generalhousework"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/hosghw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_owner_services"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="normal"
+                    android:textSize="20sp"  />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:background="#f2f2f2"
+            android:layout_weight="1"
+            >
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

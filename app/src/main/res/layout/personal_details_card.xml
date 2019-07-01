@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/colorPrimary"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Registered by : "
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_org"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Techsavanna Co. Ltd"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txt_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Male"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:id="@+id/txt_marital_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Single"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt_age"
+                android:text="Age : "
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txt_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="10"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txt_tribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Kikuyu"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt_region"
+                android:text="Lives in "
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txt_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="Nairobi"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+
+            <TextView
+                android:id="@+id/co"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Company Contact "/>
+
+            <TextView
+                android:id="@+id/txt_company_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/co"
+                android:layout_toRightOf="@+id/co"
+                android:text="0729265990"/>
+             </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+            <TextView
+                android:id="@+id/ce"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Current Employer "/>
+            <TextView
+                android:id="@+id/txt_current_employer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ce"
+                android:layout_toRightOf="@+id/ce"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Techsavanna"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/cse"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Length of Last Employment"/>
+
+            <TextView
+                android:id="@+id/txt_length_of_last_employment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/cse"
+                android:layout_toRightOf="@+id/cse"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="2 Months"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/ssce"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="No. of Children"/>
+
+            <TextView
+                android:id="@+id/txt_no_of_children"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ssce"
+                android:layout_toRightOf="@+id/ssce"
+                android:text="3"/>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/af"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Available From"/>
+
+            <TextView
+                android:id="@+id/txt_available_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/af"
+                android:layout_toRightOf="@+id/af"
+                android:text="22nd September 2017"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/cr"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Can Relocate"/>
+
+            <TextView
+                android:id="@+id/txt_can_relocate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toEndOf="@+id/cr"
+                android:layout_toRightOf="@+id/cr"
+                android:text="Yes"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/cp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:text="Current Pay"/>
+
+            <TextView
+                android:id="@+id/ksh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/cp"
+                android:layout_toRightOf="@+id/cp"
+
+                android:text="Ksh "/>
+
+            <TextView
+                android:id="@+id/txt_current_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ksh"
+                android:layout_toRightOf="@+id/ksh"
+                android:text="20000"/>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Desired Pay"/>
+
+            <TextView
+                android:id="@+id/ksh1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/dp"
+                android:layout_toRightOf="@+id/dp"
+
+                android:text="Ksh "/>
+
+            <TextView
+                android:id="@+id/txt_desired_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ksh1"
+                android:layout_toRightOf="@+id/ksh1"
+                android:text="20000"/>
+       </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

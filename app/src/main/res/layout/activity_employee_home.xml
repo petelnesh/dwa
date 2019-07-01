@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dwakenya.techsavanna.newdwa.EmployeeHomeActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+    <include layout="@layout/content_employee_home" />
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+    <!--<android.support.design.widget.AppBarLayout--><!--android:layout_alignParentTop="true"--><!--android:id="@+id/tabanim_appbar"--><!--android:layout_width="match_parent"--><!--android:layout_height="?attr/actionBarSize"--><!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+    <!--<android.support.v7.widget.Toolbar--><!--android:id="@+id/toolbar"--><!--android:layout_width="match_parent"--><!--android:layout_height="?attr/actionBarSize"--><!--android:background="@color/colorPrimaryDark"--><!--app:layout_scrollFlags="scroll|enterAlways|snap"--><!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<ImageView--><!--android:id="@+id/header_cover_image"--><!--android:layout_width="match_parent"--><!--android:layout_height="150dp"--><!--android:scaleType="centerCrop"--><!--android:src="@drawable/nav_menu_header_bg" />-->
+
+    <!--<ImageButton--><!--android:id="@+id/user_profile_photo"--><!--android:layout_width="120dp"--><!--android:layout_height="120dp"--><!--android:layout_below="@+id/header_cover_image"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="-60dp"--><!--android:background="@drawable/profile_circular_border_imageview"--><!--android:elevation="5dp"--><!--android:padding="20dp"--><!--android:scaleType="centerCrop"/>-->
+
+    <!--<RelativeLayout--><!--android:id="@+id/profile_layout"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/header_cover_image"--><!--android:background="@color/subtitle"--><!--android:elevation="4dp"--><!--android:paddingBottom="12dp">-->
+
+
+    <!--<ImageView--><!--android:id="@+id/add_friend"--><!--android:layout_width="30dp"--><!--android:layout_height="30dp"--><!--android:layout_marginLeft="16dp"--><!--android:layout_marginTop="16dp"--><!--android:layout_alignParentRight="true"--><!--android:src="@drawable/ic_action_edit" />-->
+
+
+    <!--<TextView--><!--android:id="@+id/user_profile_name"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="76dp"--><!--android:textColor="#fff"--><!--android:textSize="16sp"--><!--android:textStyle="bold" />-->
+
+    <!--<TextView--><!--android:id="@+id/user_profile_short_"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/user_profile_name"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="6dp"--><!--android:text="Preference : "--><!--android:textColor="#fff"--><!--android:textSize="12sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/user_profile_short_bio"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/user_profile_name"--><!--android:layout_toRightOf="@+id/user_profile_short_"--><!--android:layout_toEndOf="@+id/user_profile_short_"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="6dp"--><!--android:text="Not Added"--><!--android:textColor="#fff"--><!--android:textSize="12sp" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<LinearLayout--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/profile_layout"--><!--android:layout_marginTop="5dp"--><!--android:orientation="vertical">-->
+
+    <!--//Currennt status--><!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:layout_marginBottom="@dimen/card_margin">--><!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="1dp"--><!--android:layout_margin="2dp"--><!--android:background="@color/colorPrimaryDark" />--><!--<LinearLayout--><!--style="@style/Widget.CardContent"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">--><!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentLeft="true"--><!--android:layout_alignParentStart="true"--><!--android:layout_alignBaseline="@+id/tb_status"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Title"--><!--android:text="Current Status"/>-->
+
+    <!--<ToggleButton--><!--android:id="@+id/tb_status"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_alignParentEnd="true"--><!--android:layout_marginRight="16dp"--><!--android:textOff="Occupied"--><!--android:textOn="Available" />--><!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--//Current location--><!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/card_margin">-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="1dp"--><!--android:layout_margin="2dp"--><!--android:background="@color/colorPrimaryDark" />-->
+
+    <!--<LinearLayout--><!--style="@style/Widget.CardContent"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:text="Current Location"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_loc"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Subhead"--><!--android:textSize="15sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_coordinates"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Subhead"--><!--android:textSize="15sp" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--//Key skills--><!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/card_margin">-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="1dp"--><!--android:layout_margin="2dp"--><!--android:background="@color/colorPrimaryDark" />-->
+
+    <!--<LinearLayout--><!--style="@style/Widget.CardContent"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:text="Key Skills"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_skills"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Subhead"--><!--android:textSize="15sp" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--//Add skill--><!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/card_margin">-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="1dp"--><!--android:layout_margin="2dp"--><!--android:background="@color/colorPrimaryDark" />-->
+
+    <!--<LinearLayout--><!--style="@style/Widget.CardContent"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:text="Add Skill"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="vertical">-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="2dp"--><!--android:orientation="vertical">-->
+
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner--><!--android:id="@+id/sp_speciality"--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginRight="4dp"--><!--android:popupBackground="@color/theme_primary_light"--><!--android:theme="@style/ThemeSpinner" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<EditText--><!--android:id="@+id/input_where_learnt"--><!--android:layout_width="match_parent"--><!--android:layout_height="40dp"--><!--android:hint="Where learnt"--><!--android:inputType="textPassword"--><!--android:layout_marginBottom="4dp"--><!--android:layout_marginTop="4dp"--><!--android:textColor="#000000"--><!--android:textColorHint="@color/subtitle"--><!--android:textCursorDrawable="@drawable/cursor_color" />-->
+
+
+    <!--<EditText--><!--android:id="@+id/input_level_of_training"--><!--android:layout_width="match_parent"--><!--android:layout_height="40dp"--><!--android:hint="Level of training"--><!--android:inputType="textPassword"--><!--android:layout_marginBottom="4dp"--><!--android:layout_marginTop="4dp"--><!--android:textColor="#000000"--><!--android:textColorHint="@color/subtitle"--><!--android:textCursorDrawable="@drawable/cursor_color" />-->
+
+
+    <!--<android.support.v7.widget.AppCompatButton--><!--android:id="@+id/addSpeciality"--><!--android:layout_width="fill_parent"--><!--android:layout_height="40dp"--><!--android:layout_alignParentLeft="true"--><!--android:layout_marginBottom="2dp"--><!--android:layout_marginTop="6dp"--><!--android:background="@drawable/rounded_border_edittext_filled"--><!--android:padding="12dp"--><!--android:text="Submit Skill"--><!--android:textColor="@color/white" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--//update preference--><!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/card_margin">-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="1dp"--><!--android:layout_margin="2dp"--><!--android:background="@color/colorPrimaryDark" />-->
+
+    <!--<LinearLayout--><!--style="@style/Widget.CardContent"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:text="Update Preference Skill"--><!--android:textAppearance="@style/TextAppearance.AppCompat.Small" />-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner--><!--android:id="@+id/sp_preference_skill"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_toLeftOf="@+id/fab_update_preference"--><!--android:popupBackground="@color/theme_primary_light"--><!--android:theme="@style/ThemeSpinner" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/fab_update_preference"--><!--android:layout_width="50dp"--><!--android:layout_height="50dp"--><!--android:layout_marginLeft="30dp"--><!--android:layout_alignParentEnd="true"--><!--android:layout_alignParentRight="true"--><!--android:src="@android:drawable/ic_menu_upload"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--</LinearLayout>--><!--</RelativeLayout>--><!--</ScrollView>-->
+
+
+
+
+
+
