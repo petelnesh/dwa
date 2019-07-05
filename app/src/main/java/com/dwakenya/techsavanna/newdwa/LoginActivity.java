@@ -322,7 +322,7 @@ public class LoginActivity extends AppCompatActivity {
                                             //Employee
                                             Intent intent = new Intent(LoginActivity.this,SearchActivity.class);
                                             intent.putExtra("type",user_type);
-                                            //intent.putExtra("money", cash);
+                                            intent.putExtra("phone", phone);
                                             startActivity(intent);
                                             finish();
 
@@ -331,6 +331,7 @@ public class LoginActivity extends AppCompatActivity {
                                             //Employer
                                             Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                                             intent.putExtra("type", user_type);
+                                            intent.putExtra("phone", phone);
                                             startActivity(intent);
                                             finish();
 

@@ -5,10 +5,6 @@
         android:icon="@android:drawable/ic_menu_gallery"
         android:title="@string/lbl_gallery"/>
     <item
-        android:id="@+id/it_camera"
-        android:icon="@android:drawable/ic_menu_camera"
-        android:title="@string/lbl_camera"/>
-    <item
         android:id="@+id/it_cancel"
         android:title="@string/lbl_cancel"/>
 </menu>
