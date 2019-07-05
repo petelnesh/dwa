@@ -51,8 +51,9 @@ public class AppConfig {
     public static String LENGTH = "length";
     public static String REASON = "reason";
     public static String REFEREE = "referee";
-    public static String RELIGION = "religion";
+    //public static String RELIGION = "religion";
     public static String CHILDREN = "children";
+    public static String PROFILE_IMAGE = "profile_image";
 
     public static String USER_ID = "user_id";
 

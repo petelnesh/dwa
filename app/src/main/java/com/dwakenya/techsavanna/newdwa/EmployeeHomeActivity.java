@@ -78,6 +78,8 @@ public class EmployeeHomeActivity extends AppCompatActivity implements View.OnCl
 
     String selected_speciality,selected_speciality_id, selected_preference,selected_preference_id;
 
+
+
     // Session Manager Class
     SessionManager session;
 

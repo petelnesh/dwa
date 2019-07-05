@@ -1,19 +1,24 @@
 package com.dwakenya.techsavanna.newdwa;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.FileProvider;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -49,7 +54,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
-import android.support.v4.BuildConfig;
+
+import static com.loopj.android.http.AsyncHttpClient.LOG_TAG;
 
 public class ImageCompressedActivity extends AppCompatActivity {
 
@@ -66,10 +72,16 @@ public class ImageCompressedActivity extends AppCompatActivity {
 
     private String path="";
 
+    private static final int WRITE_PERMISSION = 0x01;
+
+    @TargetApi(Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_compressed);
+
+        requestWritePermission();
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -105,25 +117,43 @@ public class ImageCompressedActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if(requestCode == WRITE_PERMISSION){
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d(LOG_TAG, "Write Permission Failed");
+                //finish();
+            }
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void requestWritePermission(){
+        if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},WRITE_PERMISSION);
+        }
+    }
 
     /**
      * Request for camera app to open and capture image.
      * @param isFromGallery-if true then launch gallery app else camera app.
      */
     public void startIntent(boolean isFromGallery) {
-        if (!isFromGallery) {
-            File imageFile = new File(imageFilePath);
-
-            fileUri = FileProvider.getUriForFile(ImageCompressedActivity.this, BuildConfig.APPLICATION_ID,imageFile); // convert path to Uri
-
-//            Uri imageFileUri = Uri.fromFile(imageFile); // convert path to Uri
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);   // set the image file name
-
-//            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageFileUri);   // set the image file name
-            startActivityForResult(intent, REQUEST_CODE_CLICK_IMAGE);
-        } else if (isFromGallery) {
+//        if (!isFromGallery) {
+//            File imageFile = new File(imageFilePath);
+//
+//            fileUri = FileProvider.getUriForFile(ImageCompressedActivity.this, BuildConfig.APPLICATION_ID,imageFile); // convert path to Uri
+//
+////            Uri imageFileUri = Uri.fromFile(imageFile); // convert path to Uri
+//            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//
+//            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);   // set the image file name
+//
+////            intent.putExtra(MediaStore.EXTRA_OUTPUT, imageFileUri);   // set the image file name
+//            startActivityForResult(intent, REQUEST_CODE_CLICK_IMAGE);
+//        }
+        //else
+        if (isFromGallery) {
             File imageFile = new File(imageFilePath);
             Uri imageFileUri = Uri.fromFile(imageFile); // convert path to Uri
             Intent intent = new Intent(
@@ -145,7 +175,7 @@ public class ImageCompressedActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        // save file url in bundle as it will be null on scren orientation
+        // save file url in bundle as it will be null on screen orientation
         // changes
         outState.putParcelable("file_uri", fileUri);
     }
@@ -166,7 +196,8 @@ public class ImageCompressedActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_CLICK_IMAGE) {
             new ImageCompression().execute(imageFilePath);
-        } else if (requestCode == REQUEST_CODE_GALLERY_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+        } else if (requestCode == REQUEST_CODE_GALLERY_IMAGE
+                && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             Uri uri = data.getData();
             String[] projection = {MediaStore.Images.Media.DATA};
@@ -211,12 +242,8 @@ public class ImageCompressedActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
-                    case R.id.it_camera:
-                        startIntent(false);
-                        break;
                     case R.id.it_gallery:
                         startIntent(true);
-
                         break;
                     case R.id.it_cancel:
 
@@ -290,9 +317,12 @@ public class ImageCompressedActivity extends AppCompatActivity {
                         .addParameter("session_link", "") //Adding text parameter to the request
                         .addParameter("user_email", AppConfig.preferences.getString(AppConfig.EMAIL, null))
                         .addParameter("image_type", "registration")
-                      //  .setNotificationConfig(new UploadNotificationConfig())
+                        //  .setNotificationConfig(new UploadNotificationConfig())
                         .setMaxRetries(0)
                         .startUpload(); //Starting the upload
+
+
+
 
             } catch (Exception exc) {
                 Toast.makeText(this, exc.getMessage(), Toast.LENGTH_SHORT).show();
@@ -316,6 +346,7 @@ public class ImageCompressedActivity extends AppCompatActivity {
             @Override
             public void run() {
                 handler.post(new Runnable() {
+
                     @Override
                     public void run() {
                         progressDialog = new ProgressDialog(ImageCompressedActivity.this,
@@ -325,7 +356,6 @@ public class ImageCompressedActivity extends AppCompatActivity {
                         progressDialog.show();
                     }
                 });
-
 
                 HashMap<String, String> params = new HashMap<String, String>();
 
@@ -362,9 +392,9 @@ public class ImageCompressedActivity extends AppCompatActivity {
                 params.put("length", AppConfig.preferences.getString(AppConfig.LENGTH, null));
                 params.put("reason", AppConfig.preferences.getString(AppConfig.REASON, null));
                 params.put("referee", AppConfig.preferences.getString(AppConfig.REFEREE, null));
-                params.put("religion", AppConfig.preferences.getString(AppConfig.RELIGION, null));
+                // params.put("religion", AppConfig.preferences.getString(AppConfig.RELIGION, null));
                 params.put("children", AppConfig.preferences.getString(AppConfig.CHILDREN, null));
-
+                params.put("image_type", AppConfig.preferences.getString(AppConfig.PROFILE_IMAGE, null));
                 params.put("password", AppConfig.preferences.getString(AppConfig.PASSWORD, null));
 
 
@@ -420,6 +450,7 @@ public class ImageCompressedActivity extends AppCompatActivity {
 
                         Log.e(TAG, "On ErrorResponse: " + error.getMessage());
                         VolleyLog.e("Error: ", error.getMessage());
+                        Toast.makeText(ImageCompressedActivity.this, "No network connection", Toast.LENGTH_SHORT).show();
                     }
                 }) {
 

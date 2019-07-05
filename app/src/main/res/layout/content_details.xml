@@ -70,6 +70,7 @@
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:text="Gender"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -125,6 +126,7 @@
                             android:textColor="@color/colorAccent"
                             android:layout_alignParentStart="true"
                             android:text="Marital Status"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -152,6 +154,7 @@
                             android:textColor="@color/colorAccent"
                             android:layout_alignParentStart="true"
                             android:text="Age"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -179,6 +182,7 @@
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:text="Children"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -206,6 +210,7 @@
                             android:textColor="@color/colorAccent"
                             android:layout_alignParentStart="true"
                             android:text="Lives in"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -292,6 +297,7 @@
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:text="Phone : "
+                            android:paddingRight="18dp"
                             android:textColor="@color/colorAccent"
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                             android:textSize="15sp" />
@@ -408,6 +414,7 @@
                             android:layout_alignParentStart="true"
                             android:textColor="@color/colorAccent"
                             android:text="Available From"
+                            android:paddingRight="18dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textSize="15sp" />
 
@@ -430,11 +437,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:text="Can Relocate"
-                            android:textColor="@color/colorAccent"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15sp" />
 
                         <TextView
@@ -505,6 +514,8 @@
                             android:id="@+id/txt_current_pay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:text="20000"
@@ -560,6 +571,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="@color/colorAccent"
                             android:layout_toLeftOf="@+id/txt_desired_pay"
                             android:text="Ksh "
 

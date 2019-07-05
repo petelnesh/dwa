@@ -214,10 +214,10 @@ public class LoginActivity extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(regId)) {
 
-            Toast.makeText(getApplicationContext(), "Firebase Reg Id: " + regId, Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Firebase Reg Id: " + regId, Toast.LENGTH_LONG).show();
         }else {
 
-            Toast.makeText(getApplicationContext(), "Firebase Reg Id is not received yet!", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Firebase Reg Id is not received yet!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -227,7 +227,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        // disable going back to the MainActivity
+        super.onBackPressed();
+
+        //disable going back to the MainActivity
         moveTaskToBack(true);
     }
 
@@ -266,6 +268,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void run() {
                         progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
                         progressDialog.setMessage("Authenticating...");
+                        progressDialog.setCanceledOnTouchOutside(false);
                         progressDialog.show();
                     }
                 });
@@ -312,23 +315,22 @@ public class LoginActivity extends AppCompatActivity {
                                         System.out.println("preference_skill ns"+preference_skill);
                                         System.out.println("image_path ns"+image_path);
 
-                                     session.createLoginSession(name, email, uid, phone, status, user_type,preference_skill, image_path);
+                                        session.createLoginSession(name, email, uid, phone, status, user_type,preference_skill, image_path);
                                         // Not Sure is the
 
                                         if (user_type.equals("1")) {
                                             //Employee
-                                            double cash=100;
-                                            Intent intent = new Intent(LoginActivity.this, MpesaActivity.class);
-                                            intent.putExtra("money",cash);
+                                            Intent intent = new Intent(LoginActivity.this,SearchActivity.class);
+                                            intent.putExtra("type",user_type);
+                                            //intent.putExtra("money", cash);
                                             startActivity(intent);
                                             finish();
 
 
                                         } else if (user_type.equals("0")) {
                                             //Employer
-                                            double cash=200;
-                                            Intent intent = new Intent(LoginActivity.this, MpesaActivity.class);
-                                            intent.putExtra("money", cash);
+                                            Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
+                                            intent.putExtra("type", user_type);
                                             startActivity(intent);
                                             finish();
 
@@ -542,7 +544,7 @@ public class LoginActivity extends AppCompatActivity {
                             || ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permissionsRequired[5])
                             || ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permissionsRequired[6])
                             || ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permissionsRequired[7])
-                    ) {
+            ) {
                 //Show Information about why you need the permission
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setTitle("Need Multiple Permissions");
@@ -629,7 +631,7 @@ public class LoginActivity extends AppCompatActivity {
                             || ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permissionsRequired[6])
                             || ActivityCompat.shouldShowRequestPermissionRationale(LoginActivity.this, permissionsRequired[7])
 
-                    ) {
+            ) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setTitle("Need Multiple Permissions");
                 builder.setMessage("Get One requires these permissions for normal functionality.");

@@ -161,7 +161,7 @@ public class RegisterStep2Activity extends AppCompatActivity implements View.OnC
                 editor.putString(AppConfig.MARITAL_STATUS, maritalStatus);
                 editor.putString(AppConfig.TRIBE, _tribeText.getText().toString());
 
-                editor.putString(AppConfig.RELIGION, _religionText.getText().toString());
+                //editor.putString(AppConfig.RELIGION, _religionText.getText().toString());
                 editor.putString(AppConfig.CHILDREN, _childrenText.getText().toString());
                 editor.apply();
 
