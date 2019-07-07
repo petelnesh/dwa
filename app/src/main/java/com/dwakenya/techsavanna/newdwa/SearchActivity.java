@@ -140,7 +140,7 @@ public class SearchActivity extends AppCompatActivity {
 
         }else {
 
-            Toast.makeText(getApplicationContext(), "Firebase Reg Id is not received yet!", Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "Firebase Reg Id is not received yet!", Toast.LENGTH_LONG).show();
         }
 
 
@@ -212,7 +212,7 @@ public class SearchActivity extends AppCompatActivity {
                     loadEmployeesRegion(String.valueOf(position+1), "load_employees_org.php");
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please select search criteria", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getApplicationContext(), "Please select search criteria", Toast.LENGTH_LONG).show();
                 }
 
 
@@ -312,6 +312,9 @@ public class SearchActivity extends AppCompatActivity {
                 refresh();
 
                 break;
+            case R.id.action_profile:
+                openProfile();
+                break;
 
 
 
@@ -325,6 +328,30 @@ public class SearchActivity extends AppCompatActivity {
         return true;
     }
 
+    private void openProfile() {
+        if (user.get(SessionManager.KEY_USER_TYPE).equals("1")) {
+            //Employee
+            Intent intent = new Intent(this, EmployeeHomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+
+        } else if (user.get(SessionManager.KEY_USER_TYPE).equals("0")) {
+
+            Intent intent = new Intent(this, SearchActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+
+        } else {
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+
+        }
+    }
 
 
     @Override

@@ -230,7 +230,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onBackPressed();
 
         //disable going back to the MainActivity
-        moveTaskToBack(true);
+        //moveTaskToBack(true);
     }
 
     public boolean validate() {

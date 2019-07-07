@@ -17,55 +17,57 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.dwakenya.techsavanna.newdwa.app.AppController"
+        android:name=".app.AppController"
         android:allowBackup="true"
         android:icon="@drawable/homecarehublogo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/homecarehublogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dwakenya.techsavanna.newdwa.FirstPage">
+        <activity android:name=".services.MpesaEmployeeActivity"></activity>
+        <activity android:name=".FirstPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dwakenya.techsavanna.newdwa.LoginActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.RegisterActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.RegisterStep2Activity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterStep2Activity" />
         <activity
-            android:name="com.dwakenya.techsavanna.newdwa.SearchActivity"
+            android:name=".SearchActivity"
             android:label="@string/title_activity_search"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.dwakenya.techsavanna.newdwa.DetailsActivity"
+            android:name=".DetailsActivity"
             android:label="@string/title_activity_details"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.dwakenya.techsavanna.newdwa.EmployeeHomeActivity"
+            android:name=".EmployeeHomeActivity"
             android:label="@string/title_activity_employee_home"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.CandidateActivity" />
+        <activity android:name=".CandidateActivity" />
 
-        <service android:name="com.dwakenya.techsavanna.newdwa.services.DwaFirebaseMessagingService">
+        <service android:name=".services.DwaFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.dwakenya.techsavanna.newdwa.services.FirebaseIDService">
+        <service android:name=".services.FirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name="com.dwakenya.techsavanna.newdwa.ImageCompressedActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.FeedBackActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.HOSActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.OwnerResourcesActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.HORActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.HASActivity" />
-        <activity android:name="com.dwakenya.techsavanna.newdwa.MpesaActivity"></activity>
+        <activity android:name=".ImageCompressedActivity" />
+        <activity android:name=".FeedBackActivity" />
+        <activity android:name=".HOSActivity" />
+        <activity android:name=".OwnerResourcesActivity" />
+        <activity android:name=".HORActivity" />
+        <activity android:name=".HASActivity" />
+        <activity android:name=".MpesaActivity" />
+        <activity android:name=".MpesaActivityEmployee" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -75,7 +77,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"
-                tools:replace="android:resource"/>
+                tools:replace="android:resource" />
         </provider>
     </application>
 

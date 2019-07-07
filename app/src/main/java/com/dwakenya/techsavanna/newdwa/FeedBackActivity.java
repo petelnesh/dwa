@@ -81,29 +81,30 @@ public class FeedBackActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
 
-        if (user.get(SessionManager.KEY_USER_TYPE).equals("1")) {
-            //Employee
-            Intent intent = new Intent(this, EmployeeHomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-
-        } else if (user.get(SessionManager.KEY_USER_TYPE).equals("0")) {
-
-            Intent intent = new Intent(this, SearchActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-
-        } else {
-
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-
-        }
+//        if (user.get(SessionManager.KEY_USER_TYPE).equals("1")) {
+//            //Employee
+//            Intent intent = new Intent(this, EmployeeHomeActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            finish();
+//
+//        } else if (user.get(SessionManager.KEY_USER_TYPE).equals("0")) {
+//
+//            Intent intent = new Intent(this, SearchActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            finish();
+//
+//        } else {
+//
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            finish();
+//
+//        }
 
     }
 
