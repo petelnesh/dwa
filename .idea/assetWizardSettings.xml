@@ -44,7 +44,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_drop" />
+                                      <entry key="outputName" value="ic_droping" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
@@ -84,14 +84,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
                                       <entry key="foregroundAssetType" value="CLIP_ART" />
                                       <entry key="foregroundImage" value="$APPLICATION_HOME_DIR$/bin/E:\munene\android\DWA (1)\NewDwa\app\src\main\res\drawable\homecarehublogo.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
                                       <entry key="outputName" value="ic_logo" />
-                                      <entry key="previewDensity" value="HIGH" />
-                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>

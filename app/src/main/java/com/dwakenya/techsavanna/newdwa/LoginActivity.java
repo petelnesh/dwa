@@ -309,7 +309,7 @@ public class LoginActivity extends AppCompatActivity {
                                         String image_path = server_url.trim()+image_url.trim();
 
                                         System.out.println("uid ns"+uid);
-                                        System.out.println("phone ns"+phone);
+                                        System.out.println("phoneee"+phone);
                                         System.out.println("status ns"+status);
                                         System.out.println("user_type ns"+user_type);
                                         System.out.println("preference_skill ns"+preference_skill);
@@ -322,7 +322,7 @@ public class LoginActivity extends AppCompatActivity {
                                             //Employee
                                             Intent intent = new Intent(LoginActivity.this,SearchActivity.class);
                                             intent.putExtra("type",user_type);
-                                            intent.putExtra("phone", phone);
+                                            intent.putExtra("phoneee", phone);
                                             startActivity(intent);
                                             finish();
 
@@ -331,7 +331,7 @@ public class LoginActivity extends AppCompatActivity {
                                             //Employer
                                             Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                                             intent.putExtra("type", user_type);
-                                            intent.putExtra("phone", phone);
+                                            intent.putExtra("phoneee", phone);
                                             startActivity(intent);
                                             finish();
 
