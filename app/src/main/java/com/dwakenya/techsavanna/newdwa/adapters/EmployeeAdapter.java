@@ -234,9 +234,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
 
                             }else if(obj.optString("error").equals("true")){
-                                Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
-                                Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
-                                c.startActivity(mpesa);
+                                if (usertype.equals("1")){
+                                    Toast.makeText(v.getContext(), "You can only view this page1", Toast.LENGTH_LONG).show();                                Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
+
+                                }else {
+                                    Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    c.startActivity(mpesa);
+                                }
 
 
                             }
@@ -297,7 +302,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                 if (!countdown1.equals(confirm_date1)) {
 
                                     //check user has paid as required
-                                    if (mpesa_receipt_number1 != null && phoneee.equals(phoney) && result_code1.equals("0")) {
+                                    if (!mpesa_receipt_number1.equals("") && phoneee.equals(phoney) && result_code1.equals("0")) {
 
 
                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -452,7 +457,8 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
                             }
 
-                        } else if (usertype.equals("1")) {
+                        }
+                        else if (usertype.equals("1")) {
 
                             Toast.makeText(v.getContext(), "You can only view this page", Toast.LENGTH_LONG).show();
                         }
