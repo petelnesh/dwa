@@ -27,6 +27,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.dwakenya.techsavanna.newdwa.DetailsActivity;
 import com.dwakenya.techsavanna.newdwa.MpesaActivity;
+import com.dwakenya.techsavanna.newdwa.MpesaActivityEmployee;
 import com.dwakenya.techsavanna.newdwa.R;
 import com.dwakenya.techsavanna.newdwa.SearchActivity;
 import com.dwakenya.techsavanna.newdwa.helpers.CheckPay;
@@ -234,12 +235,14 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
 
                             }else if(obj.optString("error").equals("true")){
-                                if (usertype.equals("1")){
-                                    Toast.makeText(v.getContext(), "You can only view this page1", Toast.LENGTH_LONG).show();                                Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
-
-                                }else {
+                                if (usertype.equals("0")){
                                     Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
                                     Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    c.startActivity(mpesa);
+                                }
+                                else if (usertype.equals("1")){
+                                    Toast.makeText(c, "Please Make your Payments", Toast.LENGTH_SHORT).show();
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivityEmployee.class);
                                     c.startActivity(mpesa);
                                 }
 
@@ -289,7 +292,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                     e.printStackTrace();
                                 }
                                 cl3.add(Calendar.DAY_OF_MONTH, -1);
-                                String countdown1 = sdf.format(cl.getTime());
+                                String countdown1 = sdf.format(cl3.getTime());
 
 
                                 //Displaying the new Date after addition of Days
@@ -352,8 +355,8 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                     } else {
 
 
-                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
-                                        c.startActivity(mpesa);
+//                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+//                                        c.startActivity(mpesa);
 
 
                                     }
@@ -379,7 +382,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                     e.printStackTrace();
                                 }
                                 cl2.add(Calendar.DAY_OF_MONTH, -1);
-                                String countdown = sdf.format(cl.getTime());
+                                String countdown = sdf.format(cl2.getTime());
 
 
                                 //Displaying the new Date after addition of Days
@@ -460,10 +463,126 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                         }
                         else if (usertype.equals("1")) {
 
-                            Toast.makeText(v.getContext(), "You can only view this page", Toast.LENGTH_LONG).show();
-                        }
 
-                }
+
+
+
+                            System.out.println("mydate....>" + confirm_date1);
+
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.ENGLISH);
+                            Calendar cl = Calendar.getInstance();
+                            try {
+                                //Setting the date to the given date
+                                cl.setTime(sdf.parse(confirm_date1));
+
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+
+
+                            //Checks if user is subscribed to yearly terms
+                            if (account_reference1.equals("1")) {
+
+                                cl.add(Calendar.DAY_OF_MONTH, 365);
+                                //Date after adding the days to the given date
+
+                                //Displaying the new Date after addition of Days
+
+                                //System.out.println("Date after Addition: "+newDate);
+                                Calendar cl3 = Calendar.getInstance();
+                                String newDate1 = sdf.format(cl3.getTime());
+
+                                try {
+                                    cl3.setTime(sdf.parse(newDate1));
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                cl3.add(Calendar.DAY_OF_MONTH, -1);
+
+                                String countdown1 = sdf.format(cl3.getTime());
+
+
+                                //Displaying the new Date after addition of Days
+
+//                                System.out.println("Date after Addition2: "+newDate1);
+//                                System.out.println("Countdown: "+countdown1);
+
+
+                                //means the user is active
+                                if (!countdown1.equals(confirm_date1)) {
+
+                                    //check user has paid as required
+                                    if (!mpesa_receipt_number1.equals("") && phoneee.equals(phoney) && result_code1.equals("0")) {
+
+
+                                        Toast.makeText(c, "You have aleady paid for you subscription", Toast.LENGTH_SHORT).show();
+                                    } else {
+
+
+                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                        c.startActivity(mpesa);
+
+
+                                    }
+
+
+                                    //if user is not active
+                                } else {
+                                    Toast.makeText(c, "Your Annual Subscription Expired on " + newDate1 + " ..PAY Again to continue Enjoying Our Services", Toast.LENGTH_SHORT).show();
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    c.startActivity(mpesa);
+                                }
+
+
+                                //if user is subscribed to Monthly terms
+                            } else if (account_reference1.equals("2")) {
+                                cl.add(Calendar.DAY_OF_MONTH, 30);
+                                //Date after adding the days to the given date
+                                Calendar cl2 = Calendar.getInstance();
+                                String newDate = sdf.format(cl.getTime());
+                                try {
+                                    cl2.setTime(sdf.parse(newDate));
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                                cl2.add(Calendar.DAY_OF_MONTH, -1);
+                                String countdown = sdf.format(cl2.getTime());
+
+
+                                //Displaying the new Date after addition of Days
+
+                                System.out.println("Date after Addition2: " + newDate);
+                                System.out.println("Countdown: " + countdown);
+
+                                //checks if user is active
+                                if (!countdown.equals(confirm_date1)) {
+
+                                    //check if user has paid as required
+                                    if (mpesa_receipt_number1 != null && phoneee.equals(phoney) && result_code1.equals("0")) {
+
+
+                                        Toast.makeText(c, "You have aleady paid for you subscription", Toast.LENGTH_SHORT).show();
+                                    } else {
+
+
+                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                        c.startActivity(mpesa);
+
+
+                                    }
+
+                                } else {
+                                    Toast.makeText(c, "Your Monthly Subscription Expired on " + newDate + " ..PAY Again to continue Enjoying Our Services", Toast.LENGTH_SHORT).show();
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    c.startActivity(mpesa);
+
+                                }
+
+
+                            }
+
+                        }
+                        }
                 },
                         new Response.ErrorListener() {
                             @Override

@@ -114,5 +114,5 @@
     <string name="home_owner_resources">Home owner Resources</string>
     <string name="home_assistance_services">Home Assistants Services</string>
     <string name="employer_subscription">*Choose Yearly Subscription and save KSH 400, In case you opt for Monthly Subscription pay 200 Monthly.</string>
-    <string name="employee_subscription">*Enter KSH 1200 for Yearly Subscription, In case you opt for Monthly Subscription Enter KSH 100.</string>
+    <string name="employee_subscription">*KSH 1200 for Yearly Subscription, In case you opt for Monthly Subscription pay KSH 100 every Month.</string>
 </resources>

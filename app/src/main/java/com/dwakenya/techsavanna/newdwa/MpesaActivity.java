@@ -221,7 +221,7 @@ public class MpesaActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                     }
-                },50000);
+                },5000);
 
 
 
