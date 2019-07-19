@@ -162,6 +162,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
 
                 final String strLastFourDi =   phoneee.length() >= 9 ? phoneee.substring(phoneee.length() - 9): "";
+                final String finalPhone = "254"+strLastFourDi;
 
                 StringRequest stringRequest1 = new StringRequest(Request.Method.GET, "https://techsavanna.net:8181/dwa/mpesaApis.php?partya=254"+strLastFourDi, new Response.Listener<String>() {
                     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -258,8 +259,10 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                         //else employer has not paid
 
 
-                        //Test whether the user is am employer;
                         Log.d("mydate", ">> " + confirm_date1);
+
+
+                        //Test whether the user is am employer;
                         if (usertype.equals("0")) {
                             System.out.println("mydate....>" + confirm_date1);
 
@@ -305,7 +308,10 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                 if (!countdown1.equals(confirm_date1)) {
 
                                     //check user has paid as required
-                                    if (!mpesa_receipt_number1.equals("") && phoneee.equals(phoney) && result_code1.equals("0")) {
+
+                                    Log.d("Message1", "img " + mpesa_receipt_number1 + " >> " +finalPhone+ ">> " + strLastFourDi + " >> " + phoneee + ">>" + result_code1 + ">>" + phoney);
+
+                                    if (!mpesa_receipt_number1.equals("") && finalPhone.equals(phoney) && result_code1.equals("0")) {
 
 
                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -352,11 +358,11 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
 
                                         c.startActivity(intent);
-                                    } else {
+                                    } else{
 
 
-//                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
-//                                        c.startActivity(mpesa);
+                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                        c.startActivity(mpesa);
 
 
                                     }
@@ -394,7 +400,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                 if (!countdown.equals(confirm_date1)) {
 
                                     //check if user has paid as required
-                                    if (mpesa_receipt_number1 != null && phoneee.equals(phoney) && result_code1.equals("0")) {
+                                    if (mpesa_receipt_number1 != null && finalPhone.equals(phoney) && result_code1.equals("0")) {
 
 
                                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -461,6 +467,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                             }
 
                         }
+                        //if user is empployee
                         else if (usertype.equals("1")) {
 
 
@@ -512,14 +519,15 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                 if (!countdown1.equals(confirm_date1)) {
 
                                     //check user has paid as required
-                                    if (!mpesa_receipt_number1.equals("") && phoneee.equals(phoney) && result_code1.equals("0")) {
+                                    if (!mpesa_receipt_number1.equals("") && finalPhone.equals(phoney) && result_code1.equals("0")) {
 
 
-                                        Toast.makeText(c, "You have aleady paid for you subscription", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(c, "You have already paid for you subscription", Toast.LENGTH_LONG).show();
                                     } else {
 
 
-                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                        Toast.makeText(c, "You can only view this page, but you can proceed to payments", Toast.LENGTH_LONG).show();
+                                        Intent mpesa = new Intent(v.getContext(), MpesaActivityEmployee.class);
                                         c.startActivity(mpesa);
 
 
@@ -529,7 +537,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                     //if user is not active
                                 } else {
                                     Toast.makeText(c, "Your Annual Subscription Expired on " + newDate1 + " ..PAY Again to continue Enjoying Our Services", Toast.LENGTH_SHORT).show();
-                                    Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivityEmployee.class);
                                     c.startActivity(mpesa);
                                 }
 
@@ -558,14 +566,15 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
                                 if (!countdown.equals(confirm_date1)) {
 
                                     //check if user has paid as required
-                                    if (mpesa_receipt_number1 != null && phoneee.equals(phoney) && result_code1.equals("0")) {
+                                    if (mpesa_receipt_number1 != null && finalPhone.equals(phoney) && result_code1.equals("0")) {
 
 
-                                        Toast.makeText(c, "You have aleady paid for you subscription", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(c, "You have already paid for you subscription", Toast.LENGTH_LONG).show();
                                     } else {
 
 
-                                        Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                        Toast.makeText(c, "You can only view this page, but you can proceed to payments", Toast.LENGTH_LONG).show();
+                                        Intent mpesa = new Intent(v.getContext(), MpesaActivityEmployee.class);
                                         c.startActivity(mpesa);
 
 
@@ -573,7 +582,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeHolder> implem
 
                                 } else {
                                     Toast.makeText(c, "Your Monthly Subscription Expired on " + newDate + " ..PAY Again to continue Enjoying Our Services", Toast.LENGTH_SHORT).show();
-                                    Intent mpesa = new Intent(v.getContext(), MpesaActivity.class);
+                                    Intent mpesa = new Intent(v.getContext(), MpesaActivityEmployee.class);
                                     c.startActivity(mpesa);
 
                                 }

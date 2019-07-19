@@ -213,7 +213,7 @@ public class MpesaActivityEmployee extends AppCompatActivity {
                 progressDialog.setMessage("Please wait...");
                 progressDialog.show();
 
-                //CheckPayment();
+                CheckPayment();
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -221,13 +221,15 @@ public class MpesaActivityEmployee extends AppCompatActivity {
                         progressDialog.dismiss();
 
                     }
-                },50000);
+                },3000);
 
 
 
             }
         });
     }
+
+
 
     private void CheckPayment() {
         StringRequest stringRequest1 = new StringRequest(Request.Method.GET, "https://techsavanna.net:8181/dwa/mpesaApis.php?partya=254"+strLastFourDi, new Response.Listener<String>() {
@@ -271,6 +273,7 @@ public class MpesaActivityEmployee extends AppCompatActivity {
                             // Log.d("Message", "img " +mpesa_receipt_number+" >> "+ account_reference+ ">> "+amount+ " >> "+partya+">>"+result_code+">>"+confirm_date);
 
 
+
                             Intent detailIntent = new Intent(MpesaActivityEmployee.this, SearchActivity.class);
                             //Bundle bundle = new Bundle();
 
@@ -291,6 +294,7 @@ public class MpesaActivityEmployee extends AppCompatActivity {
 
 
 
+                        progressDialog.dismiss();
 
 
 

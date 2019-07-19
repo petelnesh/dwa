@@ -221,7 +221,7 @@ public class MpesaActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                     }
-                },5000);
+                },3000);
 
 
 
@@ -293,6 +293,7 @@ public class MpesaActivity extends AppCompatActivity {
                             }
 
 
+                            progressDialog.dismiss();
 
 
 
