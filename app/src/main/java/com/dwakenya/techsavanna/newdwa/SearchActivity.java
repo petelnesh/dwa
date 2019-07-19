@@ -84,6 +84,8 @@ public class SearchActivity extends AppCompatActivity {
     SessionManager session;
 
     HashMap<String, String> user;
+    
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +99,8 @@ public class SearchActivity extends AppCompatActivity {
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorPrimary)));
         }
 
+        intent = getIntent();
+        final String UserType = intent.getStringExtra("type");
 
 
 
@@ -183,8 +187,7 @@ public class SearchActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
-
+        
         spinnerSelect.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -260,8 +263,9 @@ public class SearchActivity extends AppCompatActivity {
 
 
     }
-
-
+    
+    
+    
     public void refresh (){
         Intent intent = getIntent();
         finish();
@@ -291,38 +295,30 @@ public class SearchActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-
-
+    
+    
             case R.id.action_logout:
-
+        
                 session.logoutUser();
-
+        
                 break;
-
-            case R.id.action_feedback:
-
-                Intent i2= new Intent(this, FeedBackActivity.class);
-                i2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(i2);
-
-                break;
-
+    
+    
             case R.id.action_refresh:
-
+        
                 refresh();
-
+        
                 break;
             case R.id.action_profile:
                 openProfile();
                 break;
-
-
-
+    
+    
+    
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
-
         }
 
         return true;
@@ -332,24 +328,24 @@ public class SearchActivity extends AppCompatActivity {
         if (user.get(SessionManager.KEY_USER_TYPE).equals("1")) {
             //Employee
             Intent intent = new Intent(this, EmployeeHomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
-
+            // finish();
+        
         } else if (user.get(SessionManager.KEY_USER_TYPE).equals("0")) {
-
-            Intent intent = new Intent(this, SearchActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        
+            Intent intent = new Intent(this, EmployeeHomeActivity.class);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
-
+            // finish();
+        
         } else {
-
+        
             Intent intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
-
+            //finish();
+        
         }
     }
 
@@ -380,7 +376,9 @@ public class SearchActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         progressDialog = new ProgressDialog(SearchActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
-                        progressDialog.setMessage("Loading...");
+                        progressDialog.setCanceledOnTouchOutside(false);
+                        progressDialog.setTitle("Loading");
+                        progressDialog.setMessage("Please wait...");
                         progressDialog.show();
                     }
                 });

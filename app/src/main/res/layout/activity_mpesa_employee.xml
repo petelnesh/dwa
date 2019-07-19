@@ -45,33 +45,12 @@
                 android:fontFamily="@font/oxygen_bold"
                 android:text="@string/employee_subscription"
                 android:textColor="#CF1E25"
-                android:gravity="center"
-                android:layout_gravity="center"
                 android:textSize="12sp"
                 android:textStyle="normal" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/oxygen_bold"
-                android:text="Select Subscription Type"
-                android:textColor="#000"
-                android:textSize="12sp"
-                android:textStyle="normal" />
-
-
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/subscription"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/spinner"
-                android:spinnerMode="dropdown" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="32dp"
                 android:fontFamily="@font/oxygen_bold"
                 android:text="Enter PhoneNumber"
                 android:textColor="#000"
@@ -81,7 +60,7 @@
             <EditText
                 android:id="@+id/editTextPhoneNumber"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_gray"
                 android:hint="Enter Phone Number"
@@ -97,38 +76,23 @@
                 android:textSize="12sp"
                 android:textStyle="normal" />
 
-            <TextView
+            <EditText
                 android:id="@+id/editTextAmount"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:textSize="24dp"
                 android:background="@drawable/bg_gray"
-                android:hint="Amount will appear here"
+                android:hint="Enter Amount"
                 android:inputType="number" />
 
             <Button
                 android:id="@+id/sendButton"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/bg_green_button"
                 android:fontFamily="@font/oxygen_bold"
                 android:text="Lipa na Mpesa"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/sendContinue"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:visibility="gone"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/continue_btn"
-                android:fontFamily="@font/oxygen_bold"
-                android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="16sp" />

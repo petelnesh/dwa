@@ -10,6 +10,9 @@
     <color name="title">#222222</color>
     <color name="subtitle">#802b00</color>
 
+    <color name="grey">#a6a4a4</color>
+    <color name="background">#3c8e8e8e</color>
+
 
     // Color Theme
 

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_mpesa"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="Lipa na Mpesa" />
+    <item
+        android:id="@+id/action_feed"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        android:title="Feedback"/>
+</menu>

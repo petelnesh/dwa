@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/test"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/homecarehublogo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="Frequently Asked Questions"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:id="@+id/Quez1"
+            android:onClick="onClick"
+            android:paddingRight="40dp"
+            android:textColor="@android:color/black"
+            android:text="1. How do I join the app?"
+            android:layout_height="wrap_content"
+            android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image1"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="15dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:id="@+id/Note1"
+        android:visibility="gone"
+        android:background="@drawable/border"
+        android:text="i. You must go through a homecare management course training with us. \n \n
+ii. Provide the required documents; a copy of your ID card and a certificate of good conduct.\n \n
+iii. A registration fee of 100 shillings is paid monthly\n \n
+iv. A passport photo"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez2"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="2. Where are your hub locations?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="50dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image2"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/Note2"
+        android:background="@drawable/border"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="We have several hubs in various locations as bellow;"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/screenshot"
+            android:layout_height="340dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez3"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="3. What are your contacts?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" >
+    </TextView>
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" >
+        </ImageView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:id="@+id/Note3"
+        android:visibility="gone"
+        android:background="@drawable/border"
+        android:text="You can reach us through;\n \n
+0722 722 871\n
+0795 087 007"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez4"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="4. What are your social media pages?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image4"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:id="@+id/Note4"
+        android:visibility="gone"
+        android:background="@drawable/border"
+        android:text="Our face book page is;\n \n
+a) Homecarehub\n
+b) East African Institute of Homecare    Management"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez5"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="5. Must I have a smart phone to be in the app?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image5"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:id="@+id/Note5"
+        android:background="@drawable/border"
+        android:text="No. Even without one we can help you join the app after meeting the requirements."
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez6"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="6. What do you train in the hubs?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image6"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:id="@+id/Note6"
+        android:background="@drawable/border"
+        android:text="The homecare management course comprises of the following units;\n \n
+a) House keeping \n
+b) Laundry work \n
+c) Childcare \n
+d) Home nursing \n
+e) Pets \n
+f) Household Waste Disposal \n
+g) Cookery \n
+h) Life skills \n
+i) Emerging issues and trends in homecare \n"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:onClick="onClick"
+        android:id="@+id/Quez7"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="7. Is there a certificate after the training?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image7"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:id="@+id/Note7"
+        android:background="@drawable/border"
+        android:text="Yes. After completion of the training, you are tested and certified."
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:onClick="onClick"
+        android:id="@+id/Quez8"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="8. If I get an opportunity through the app to work, how do I get my pay?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image8"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:id="@+id/Note8"
+        android:visibility="gone"
+        android:background="@drawable/border"
+        android:text="a) When you get an opportunity through the app, you will get a call from the prospective employer to discuss terms of payment. The payment is made directly to the employee by the employer. \n \n
+b) We recommend agreements regarding payment done through texts to act as evidence in case of disagreement. \n \n
+c) Payment is also recommended to be via Mpesa for the same purposes. "
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/Quez9"
+        android:onClick="onClick"
+        android:paddingRight="40dp"
+        android:textColor="@android:color/black"
+        android:text="9. How can I launch complain regarding a client?"
+        android:layout_height="wrap_content"
+        android:paddingEnd="40dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:id="@+id/image9"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:id="@+id/Note9"
+        android:visibility="gone"
+        android:background="@drawable/border"
+        android:text="All complaints are launched through the feedback form in the app."
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+</ScrollView>

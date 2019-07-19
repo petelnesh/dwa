@@ -267,7 +267,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
-                        progressDialog.setMessage("Authenticating...");
+                        progressDialog.setTitle("Authenticating");
+                        progressDialog.setMessage("Please wait...");
                         progressDialog.setCanceledOnTouchOutside(false);
                         progressDialog.show();
                     }

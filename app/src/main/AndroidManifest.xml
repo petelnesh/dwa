@@ -68,6 +68,15 @@
         <activity android:name=".HASActivity" />
         <activity android:name=".MpesaActivity" />
         <activity android:name=".MpesaActivityEmployee" />
+        <activity android:name=".About" />
+        <activity android:name=".ContractActivity" />
+        <activity android:name=".FAQActivity" />
+        <activity android:name=".HASTraining" />
+        <activity android:name=".HORTraining" />
+        <activity android:name=".Pdf" />
+        <activity android:name=".PdfHAS" />
+        <activity android:name=".PDFView" />
+        <activity android:name=".Video" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

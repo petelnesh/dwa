@@ -1,8 +1,8 @@
 package com.dwakenya.techsavanna.newdwa;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -20,8 +20,23 @@ public class HASActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if (view.getId()==R.id.hos){
-            startActivity(new Intent(HASActivity.this, FeedBackActivity.class));
+        if (view.getId()== R.id.traininghor){
+           startActivity(new Intent(HASActivity.this, HASTraining.class));
+        }
+        else if (view.getId() == R.id.contracthas){
+      startActivity(new Intent(HASActivity.this, ContractActivity.class));
+        }
+        else if (view.getId() == R.id.feedbackhos){
+            final String filename ="https://techsavanna.net:8181/dwa/Media/pdf/employee/feedback/Employee Feedback Form.pdf";
+            Intent intent = new Intent(HASActivity.this, PDFView.class);
+            intent.putExtra("PDFUrl", filename);
+            startActivity(intent);
+        }
+        else if (view.getId() == R.id.codeOfConduct){
+            final String filename ="https://techsavanna.net:8181/dwa/Media/pdf/employee/conduct/Employee Code of Ethics.pdf";
+            Intent intent = new Intent(HASActivity.this, PDFView.class);
+            intent.putExtra("PDFUrl", filename);
+            startActivity(intent);
         }
     }
 }

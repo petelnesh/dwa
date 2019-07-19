@@ -2,10 +2,12 @@ package com.dwakenya.techsavanna.newdwa;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -50,7 +52,7 @@ eorname.setText("Home Assistants' Services");
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstPage.this,LoginActivity.class);
+                Intent intent=new Intent(FirstPage.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,30 +60,61 @@ eorname.setText("Home Assistants' Services");
         btnsign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstPage.this,RegisterActivity.class);
+                Intent intent=new Intent(FirstPage.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
         eoscv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstPage.this,HASActivity.class);
+                Intent intent=new Intent(FirstPage.this, HASActivity.class);
                 startActivity(intent);
             }
         });
         horcv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstPage.this,HORActivity.class);
+                Intent intent=new Intent(FirstPage.this, HORActivity.class);
                 startActivity(intent);
             }
         });
        hoscv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstPage.this,HOSActivity.class);
+                Intent intent=new Intent(FirstPage.this, HOSActivity.class);
                 startActivity(intent);
             }
         });
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+        
+        
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            
+            case R.id.action_contact:
+                startActivity(new Intent(FirstPage.this, About.class));
+                break;
+            case R.id.action_faq:
+                startActivity(new Intent(FirstPage.this, FAQActivity.class));
+                break;
+            
+            
+            
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+            
+        }
+        
+        return true;
     }
 }

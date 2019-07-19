@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".About">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/homecarehublogo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Follow us on:"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/FacebookIcon"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/facebook"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/twitter"
+            android:layout_height="60dp"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/linkedin"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Facebook"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Twitter"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Linked In"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="About Our App and Services"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="History of the Centre for Domestic Training and Development (CDTD):"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="Before the CDTD’s inception, Edith Murogo employed domestic workers in her home, taught them management skills and sought to understand the challenges that faced this group. In 2001, the pilot phase of the CDTD was launch and served 5 girls from Kibera and registered as an NGO in 2003. The CDTD has adopted programs to help the disadvantaged, but the Domestic Worker transformation program is the main focus. The core values of the CDTD are: mobilization, skills training, employment, advocacy and protection."
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="The Mission of the CDTD:"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="To strengthen the potentiality of the less privileged through advocacy, temporary shelter, skills training, psycho-social support and economic empowerment in order to become productive members of the society. The 3 Arms of the CDTD are: The East African Institute of Home Care Management, Advocacy Program, and the Talia Agler Girls’ Shelter (TAGS) which is a program that engages partners to intervene in girl child issues to identify and assist abused and trafficked girls in Kenya and neighboring countries. TAGS ensures that rescused girls access services for appropriate recovery and social integration."
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Who is a Domestic Worker:"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text=" A domestic worker is someone who is employed permanently or temporarily in a household as a cook, housekeeper, private driver, cleaner, nanny, and gardener."
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Mission of the East African Institute of Home Care Management (EAIHM):"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="An institute that offers a unique curriculum and training aimed at creating professionals in Homecare Management and wider Hospitality industry for the East African community and beyond. EAIHM offers customized training programs for home assistants (see table at the end of the page for available courses)."
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Services of the Homecare Hub app:"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="This app connects employers to home assistants, offers employer and employee resources, and can provide job placement services for live in home assistants (if need of this service, employers are requested to contact CDTD to set an appointment)."
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Purpose of Homecare Hub app:"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="A convenient and safe service that connects employers to home assistants. Employers use the app to request a service and have the ability to view varying profiles and select the individual that meets their best needs for temporary service."
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Subscription and Monthly Fee:"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="• Employers will have to pay an annual subscription fee of 1500 Kenyan shillings \n
+• The home assistant must pay a monthly fee of 100 Kenyan shillings and an annual fee of 1200 Kenyan shillings"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Our 2019 Skills Training Time Table"
+        android:layout_height="wrap_content" />
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:src="@drawable/screen"
+      android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>
